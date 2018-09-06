@@ -18,6 +18,7 @@ import { initUserEditLink } from 'common/modules/discussion/user-edit-link';
 import { init as initTabs } from 'common/modules/ui/tabs';
 import { enhanceAdPrefs } from 'common/modules/identity/ad-prefs';
 import { enhanceAccountCreation } from 'common/modules/identity/upsell/account-creation';
+import { enhanceConfirmEmailThankYou } from 'common/modules/identity/upsell/confirm-email-thank-you';
 import { enhanceFollow } from 'common/modules/identity/follow';
 
 const initFormstack = (): void => {
@@ -67,6 +68,7 @@ const initProfile = (): void => {
         ['enhance-consent-journey', enhanceConsentJourney],
         ['init-header', initHeader],
         ['init-upsell-account-creation', enhanceAccountCreation],
+        ['init-upsell-confirm-email-thank-you', enhanceConfirmEmailThankYou],
         ['init-follow', enhanceFollow],
     ];
     catchErrorsWithContext(modules);
